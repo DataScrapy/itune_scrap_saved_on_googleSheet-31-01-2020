@@ -33,7 +33,7 @@ def gwrite_to_google_sheet(i, id, postCard_name, postcard_host, postcard_Descrip
         new_sheet.append_row(row)
 
 
-
+'''
 def write_to_csv(j, id, postCard_name, postcard_host, postcard_Description, category, no_of_epsiode, start_date, ArtWork, website, email, rss_Feed,
                  language, latest_publish_Epsiode_Date, itune_link, latest_publish_Epsiode_Title, recent_pupliched_on_Last_6_weeks, rating):
     select = True
@@ -50,7 +50,7 @@ def write_to_csv(j, id, postCard_name, postcard_host, postcard_Description, cate
                 'Language': language, 'Latest Publish Epsiode Date': latest_publish_Epsiode_Date, 'iTune Link': itune_link, 'Latest Publish Epsiode Title': latest_publish_Epsiode_Title,
                 'Recent Pupliched On Last 6 Weeks': recent_pupliched_on_Last_6_weeks, 'Rating': rating}, ignore_index=True)
     objDF.to_csv(file_name)
-
+'''
 
 def html_parser(j, url):
     item_list = []
@@ -120,8 +120,7 @@ def main():
                             gwrite_to_google_sheet(i, id, postCard_name, postcard_host, postcard_Description, category, no_of_epsiode, start_date, ArtWork, website, email, rss_Feed,
                                           language, latest_publish_Epsiode_Date, itune_link, latest_publish_Epsiode_Title, recent_pupliched_on_Last_6_weeks, rating)
                             i += 1
-                            if i==4:
-                                de = ''
+                            
                         except Exception:
                             pass
                 except Exception:
